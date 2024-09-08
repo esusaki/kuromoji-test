@@ -9073,5 +9073,7 @@
 
         path.forEach((element)=>ans = ans +  ' ' + element.basic_form + '(' + element.pos  + ') ');
 
+        ans += '<p>コンソールでもっといろいろな情報を見られます</p>'
+
         resultArea.innerHTML = ans;
     });
