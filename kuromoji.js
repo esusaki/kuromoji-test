@@ -9061,5 +9061,14 @@
     kuromoji.builder({ dicPath: "./dict" }).build(function (err, tokenizer) {
         // tokenizer is ready
         var path = tokenizer.tokenize("すもももももももものうち");
-        path.forEach((element)=>console.log(element));
+
+        var ans = '';
+
+        path.forEach((element)=>ans = ans +  ' ' + element.basic_form + '(' + element.pos  + ') ');
+
+        console.log(ans);
+
+        const resultArea = document.getElementById('result');
+
+        resultArea.innerHTML = ans;
     });
